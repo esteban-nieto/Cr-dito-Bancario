@@ -4,7 +4,6 @@ __pycache__/
 *.xls
 *.csv
 .venv/
-.env
 .ipynb_checkpoints/
 PowerBI/*
 models/*
