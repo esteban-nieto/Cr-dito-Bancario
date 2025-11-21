@@ -2,7 +2,6 @@ from pptx import Presentation
 from pptx.util import Inches, Pt
 import os
 
-# Rutas de imágenes generadas en el proyecto
 IMAGES = {
     "Distribución morosidad": "PowerBI/plot_morosidad.png",
     "AUC comparativo": "PowerBI/plot_auc_comparativa.png",
@@ -32,10 +31,6 @@ def add_image_slide(title, image_path):
     slide = prs.slides.add_slide(slide_layout)
     slide.shapes.title.text = title
     slide.shapes.add_picture(image_path, Inches(1), Inches(1.5), width=Inches(8))
-
-# -------------------------------
-# Create Slides
-# -------------------------------
 
 add_title_slide("Informe Analítico - Morosidad Crediticia",
                 "Generado automáticamente desde Python")
@@ -67,6 +62,5 @@ add_text_slide("Recomendaciones",
 • Desarrollar alertas preventivas basadas en el score de riesgo.
 """)
 
-# Guardar el archivo
 prs.save("PowerBI/Informe_Morosidad.pptx")
 print("PowerPoint generado exitosamente en PowerBI/Informe_Morosidad.pptx")

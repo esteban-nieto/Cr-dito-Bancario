@@ -14,13 +14,11 @@ client = openai.OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY")
     
 )
-# Conectar a la base SQLite
 DB_PATH = "data.sqlite"
 conn = sqlite3.connect(DB_PATH)
 train = pd.read_sql("SELECT * FROM train", conn)
 conn.close()
 
-# Generar resumen automático con OpenAI
 prompt = f"""
 Analiza la base de datos de morosidad crediticia con las siguientes variables:
 {', '.join(train.columns)}.
@@ -38,7 +36,6 @@ response = client.responses.create(
 
 insight = response.output_text
 
-# Guardar el resumen en la carpeta PowerBI
 os.makedirs("PowerBI", exist_ok=True)
 with open("PowerBI/insight_openai.txt", "w", encoding="utf-8") as f:
     f.write(insight)
