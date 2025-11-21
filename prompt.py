@@ -40,4 +40,4 @@ os.makedirs("PowerBI", exist_ok=True)
 with open("PowerBI/insight_openai.txt", "w", encoding="utf-8") as f:
     f.write(insight)
 
-print("Análisis automático completado y guardado en PowerBI/insight_openai.txt ✅")
+print("Análisis automático completado y guardado en PowerBI/insight_openai.txt")
