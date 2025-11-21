@@ -38,13 +38,13 @@ Se realiza mediante las siguientes etapas:
 
 1. Crea un archivo `.env` en la raíz del proyecto con tu clave:
    ```bash
-   GROQ_API_KEY="tu_clave_aqui"
-2.response = client.responses.create(
+   "GROQ_API_KEY="tu_clave_aqui"
+2. response = client.responses.create(
     model="openai/gpt-oss-120b",
     input="Analiza la base de datos de morosidad y sugiere visualizaciones...")
     El resultado del analisis automatico se guarda 
     PowerBI/insight_openai.txt
-3.Automatizacion con push.bat
+3. Automatizacion con push.bat
     En el archivo ya estan los comandos ya establecidos para que se guarde los cambios del proyecto a github
     solo al llamar .\push.bat en el bash
 
