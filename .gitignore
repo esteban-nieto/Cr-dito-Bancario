@@ -1,8 +1,4 @@
 __pycache__/
-*.sqlite
-*.xlsx
-*.xls
-*.csv
 .venv/
 .env
 .ipynb_checkpoints/
