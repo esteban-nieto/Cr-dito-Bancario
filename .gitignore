@@ -7,3 +7,5 @@ __pycache__/
 .env
 .ipynb_checkpoints/
 PowerBI/*
+models/
+*.joblib
